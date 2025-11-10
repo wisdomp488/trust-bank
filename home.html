@@ -13,7 +13,7 @@
 <body>
     
     <!-- navbar begin -->
-    <nav class="fixed top-0 right-0 left-0 bg-[white] w-[100%]">
+    <nav class="fixed top-0 right-0 left-0 z-50 bg-[white] w-[100%]">
         <div class="flex justify-between items-center">
             <div class="lg:ml-[20px] md:ml-[30px]">
                 <img src="image/bank-logo.png" alt="" class="w-[150px] h-[100px]">
@@ -46,11 +46,11 @@
                     <a href="wealth.html" class="hover:text-[blue]">Wealth</a>
                 </div>
             </div>
-            <div class="mr-[10px] md:mr-[30px]">
-                <div class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden" id="develop">
+            <div class="flex mr-[10px] md:mr-[30px]">
+                <div id="develop" class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden">
                     <button class="fa-solid fa-bars" onclick="greeCee()"></button>
                 </div>
-                <div class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden" id="deploy">
+                <div id="deploy" class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden ">
                     <button class="fa-solid fa-x" onclick="secTion()"></button>
                 </div>
             </div>
@@ -66,8 +66,8 @@
 
         <!-- mobile nav -->
         <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
-            <div class="hidden lg:hidden flex flex-col justify-center gap-3 text-center bg-[white] w-[100%] mx-auto h-[355px] font-bold text-[gray]" id="demolish">
-                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
+            <div id="demolish" class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col gap-3 lg:hidden text-center bg-white w-full font-bold text-gray-700">
+                <div class="flex justify-center items-center text-center  font-semibold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
                     <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
                         <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
                         <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
@@ -75,45 +75,48 @@
                     </div>
                     <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
                         <div class="border-b-1">
-                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
+                            <a href="bankaccount.html" class="hover:text-[blue] font-semibold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
                         </div>
                         <div class="border-b-1">
-                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
+                            <a href="" class="hover:text-[blue] font-semibold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
                         </div>
                         <div class="border-b-1">
-                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
+                            <a href="mortgages.html" class="hover:text-[blue] font-semibold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
                         </div>
                     </div>
                 </div>
-                <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Business</a>
-                <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Commercial</a>
-                <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Investments</a>
-                <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Loans</a>
-                <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Insurance</a>
-                <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">About Us</a>
-                <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Wealth</a>
+                <!-- Mobile Menu -->
+                <div class="flex flex-col divide-y divide-gray-300 font-semibold">
+                    <a href="business.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Business</a>
+                    <a href="commercial.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Commercial</a>
+                    <a href="investment.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Investments</a>
+                    <a href="loan.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Loans</a>
+                    <a href="insurance.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Insurance</a>
+                    <a href="about.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">About Us</a>
+                    <a href="wealth.html" class="hover:text-[blue] transition-all ease-out duration-300 py-2 w-[100%] ">Wealth</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- navbar end -->
 
     <!-- hero session being -->
-    <div class="bg-[url('./image./bank-bg.jpg')] w-[100%] mt-[100px] lg:mt-[100px] h-[80vh] lg:h-screen bg-center bg-cover bg-no-repeat">
-        <div class="w-[90%] lg:w-[100%] text-[white] mx-auto pt-[240px] lg:pt-[170px] md:pt-[390px] flex flex-col gap-5 md:w-[100%] ">
-            <div class="text-blue-500 text-[25px] mx-auto font-bold w-[93%] lg:text-[40px] md:w-[87%] md:text-[40px] lg:w-[80%]">
-                <h2><strong class="text-[]">WEALTH TRUST BANK</strong></h2>
+    <div class="bg-[url('./image./Business-meeting.jpg')] w-[100%] mt-[100px] lg:mt-[100px] h-[50vh] lg:h-[80vh] bg-center bg-cover bg-no-repeat">
+        <div class="w-[90%] lg:w-[100%] text-[white] mx-auto pt-[40px] lg:pt-[100px] md:pt-[100px] flex flex-col gap-5 md:w-[100%] ">
+            <div class="text-blue-500 text-[20px] mx-auto font-bold w-[93%] lg:text-[40px] md:w-[87%] md:text-[40px] lg:w-[80%]">
+                <h2><span class="underline">Wealth Trust Bank</span> Where Excellence Meets Finance.</h2>
             </div>
             <div class="lg:w-[80%] mx-auto md:w-[90%]">
-                <div class="w-[90%] ml-[15px] text-[white] font-bold mx-auto lg:text-[25px] lg:ml-0 lg:w-[60%] md:w-[80%] md:text-[23px]">
-                    <h1>We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app.</h1>
+                <div class="w-[90%] ml-[15px] text-[white] mx-auto lg:text-[25px] lg:ml-0 lg:w-[60%] md:w-[80%] md:text-[23px]">
+                    <p>Empowering individuals and businesses to grow with confidence, experience banking backed by advanced security and trusted support.</p>
                 </div>
             </div>
         </div>
-        <div class="flex gap-5 mt-[20px] ml-[34px] lg:ml-[135px] md:ml-[60px] md:mt-[50px]">
-            <div class="bg-[red] w-[115px] p-[10px] hover:bg-[blue] text-[11px] text-center rounded-[15px] lg:text-[13px] lg:h-[40px] lg:w-[130px] md:text-[20px] font-semibold text-[white] md:p-[8px] md:h-[50px] md:w-[190px] h-[40px]">
+        <div class="flex gap-5 mt-[30px] ml-[34px] lg:ml-[135px] md:ml-[60px] md:mt-[50px]">
+            <div class="bg-[#0fc9bb]  p-[11px] rounded-[5px] hover:bg- text-[11px] text-center  lg:text-[13px] lg:h-[40px] lg:w-[130px] md:text-[20px] font-semibold text-[white] md:p-[8px] md:h-[50px] md:w-[190px] ">
                 <button>CREATE ACCOUNT</button>
             </div>
-            <div class="bg-[blue] w-[80px] hover:bg-[red] text-[11px] text-[white] rounded-[15px] lg:text-[13px] lg:h-[40px] lg:w-[70px] text-center font-semibold p-[10px] md:text-[20px] md:p-[8px] md:h-[50px] md:w-[100px] h-[40px]">
+            <div class="bg-blue-500 w-[80px] hover:bg- text-[11px] text-[white] rounded-[5px] lg:text-[13px] lg:h-[40px] lg:w-[70px] text-center font-semibold p-[11px] md:text-[20px] md:p-[8px] md:h-[50px] md:w-[100px] ">
                 <button>LOGIN</button>
             </div>
         </div>
@@ -121,10 +124,10 @@
     <!-- hero session end -->
     <div class="bg-[#fafafb] w-[100%] lg:h-[460px] md:h-[550px] h-[840px] pt-[40px]">
         <div class="lg:flex  lg:w-[90%] lg:mt-[40px] mx-auto">
-            <div class="md:flex flex-row md:w-[100%] md:mt-[40px] lg:mt-0 lg:w-[50%]">
-                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] lg:mt-[30px] pt-[40px] md:w-[40%] lg:w-[40%] md:mt-[20px] md:p-[20px] lg:h-[230px]">
+            <div class="md:flex md:w-[95%] md:mx-auto md:mt-[40px] lg:mt-0 lg:w-[50%]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] lg:mt-[30px] pt-[40px] md:w-[45%] lg:w-[40%] md:mt-[20px] md:p-[20px] lg:h-[230px]">
                     <div class="flex flex-col gap-3">
-                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                        <div class="text-[#2A3F65] font-semibold text-[17px]">
                             <h2>Earn money</h2>
                         </div>
                         <div class="text-[#5D7079] lg:w-[95%]">
@@ -132,9 +135,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] md:w-[40%] lg:w-[40%] lg:h-[230px]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] md:w-[45%] lg:w-[40%] lg:h-[230px]">
                     <div class="flex flex-col gap-3">
-                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                        <div class="text-[#2A3F65] font-semibold text-[17px]">
                             <h2>Custom Saving Spaces</h2>
                         </div>
                         <div class="text-[#5D7079] lg:w-[95%]">
@@ -143,10 +146,10 @@
                     </div>
                 </div>
             </div>
-            <div class="md:w-[100%] md:flex flex-row lg:w-[50%]">
-                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[40%] lg:h-[230px]">
+            <div class="md:flex md:w-[95%] md:mx-auto lg:w-[50%]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[45%] lg:h-[230px]">
                     <div class="flex flex-col gap-3">
-                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                        <div class="text-[#2A3F65] font-semibold text-[17px]">
                             <h2>Spending Insights</h2>
                         </div>
                         <div class="text-[#5D7079] lg:w-[100%]">
@@ -154,9 +157,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[40%] lg:h-[230px]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[45%] lg:h-[230px]">
                     <div class="flex flex-col gap-3">
-                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                        <div class="text-[#2A3F65] font-semibold text-[17px]">
                             <h2>24/7 customer support</h2>
                         </div>
                         <div class="text-[#5D7079] lg:w-[95%]">
@@ -251,21 +254,21 @@
     
     <div class="bg-[#fafafb] h-[1180px] lg:h-[610px] md:h-[890px]">
         <div class="w-[100%] mx-auto pt-[50px] md:pt-[100px]">
-            <div class="text-[green] font-semibold w-[45%] mx-auto lg:w-[20%] md:text-[20px] md:w-[27%]">
+            <div class="text-[green] font-semibold text-center mx-auto lg:w-[20%] md:text-[20px] md:w-[27%]">
                 <span>The basics, made better.</span>
             </div>
-            <div class="text-[#2a3f65] w-[90%] text-center mx-auto text-[20px] md:text-[25px] lg:text-[25px] font-bold mt-[20px]">
+            <div class="text-[#2a3f65]  text-center mx-auto text-[20px] md:text-[25px] lg:text-[25px] font-semibold mt-[10px]">
                 <p>Better guidance, better service, better financial choices.</p>
             </div>
         </div>
         <div class="lg:flex lg:w-[90%] mx-auto ">
-            <div class="md:flex md:w-[95%] lg:w-[50%]">
-                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+            <div class="md:flex md:w-[95%] lg:w-[50%] md:mx-auto">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[45%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] w-[50px] h-[50px]">
                             <img src="image/email.png" alt="">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Consultancy</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -273,12 +276,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[45%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[blue] text-[40px]">
                             <img src="image/transaction.png" alt="" class="w-[50px] h-[50px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Online Banking</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -287,13 +290,13 @@
                     </div>
                 </div>
             </div>
-            <div class="md:flex md:w-[95%] lg:w-[50%]">
-                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+            <div class="md:flex md:w-[95%] lg:w-[50%] md:mx-auto">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[45%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] text-[#007bd8]">
                             <img src="image/income(1).png" alt="" class="w-[50px] h-[50px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Loans</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -301,12 +304,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] lg:w-[45%] w-[95%] mt-[40px] md:w-[40%]">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] lg:w-[45%] w-[95%] mt-[40px] md:w-[45%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[blue] text-[40px]">
                             <img src="image/exchange-rate.png" alt="" class="w-[50px] h-[50px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Investment Plan</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -319,28 +322,28 @@
     </div>
     <div class="lg:flex items-center lg:w-[90%] mx-auto lg:pt-[40px] lg:pb-[90px] md:mt-[70px] pb-[60px]">
         <div class="w-[100%] lg:flex lg:w-[80%] md:flex md:w-[100%]">
-            <div class="w-[95%] mx-auto pt-[70px] lg:w-[60%] lg:pt-0 md:w-[45%] md:pt-5">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="w-[95%] mx-auto pt-[70px] lg:w-[60%] lg:pt-0 md:w-[45%] md:pt-5">
                 <img src="image/testimonial1.jpg" alt="" class="w-[100%] h-[450px] lg:w-[90%] lg:h-[410px] md:w-[90%] rounded-[10px]">
             </div>
             <div class="lg:flex flex-col lg:w-[70%] md:w-[45%] lg:mt-0">
-                <div class="w-[95%] mt-[30px] lg:mt-0 mx-auto">
+                <div data-aos="flip-right" class="w-[95%] mt-[30px] lg:mt-0 mx-auto">
                     <img src="image/invest4.jpg" alt="" class="w-[100%] h-[200px] lg:w-[90%] md:w-[90%] rounded-[10px]">
                 </div>
-                <div class="w-[95%] mt-[30px] lg:mt-3 mx-auto">
+                <div data-aos="zoom-out-down" class="w-[95%] mt-[30px] lg:mt-3 mx-auto">
                     <img src="image/invest3.jpg" alt="" class="w-[100%] h-[200px] lg:w-[90%] md:w-[90%] rounded-[10px]">
                 </div>
             </div>
         </div>
         <div class="w-[100%] lg:w-[80%]">
-            <div class="flex flex-col gap-[10px] lg:mt-0 mt-[30px]">
-                <div class="text-[green] font-semibold w-[90%] mx-auto lg:w-[90%]">
+            <div class="flex flex-col gap-[10px] lg:mt-0 mt-[30px] w-[95%] mx-auto">
+                <div class="text-[green] font-semibold mx-auto  lg:text-[20px] ">
                     <span>Investments</span>
                 </div>
-                <div class="font-bold w-[90%] text-[20px] lg:text-[25px] mx-auto text-[#2a3f65] lg:w-[90%]">
+                <div class="font-semibold text-center text-[17px] lg:text-[25px] mx-auto text-[#2a3f65] ">
                     <h3>Investing could help grow your savings so that you can do more of what you enjoy in life</h3>
                 </div>
-                <div class="text-[#5D7079] w-[90%] mx-auto lg:w-[90%]">
-                    <p class="w-[100%]">Our Investment Banking teams deliver high-quality strategic advice and creative financing solutions to our clients, including mergers and acquisitions, financing, and risk management transactions.</p>
+                <div class="text-[#5D7079] text-center  text-[17px] ">
+                    <p>Our Investment Banking teams deliver high-quality strategic advice and creative financing solutions to our clients, including mergers and acquisitions, financing, and risk management transactions.</p>
                 </div>
             </div>
             <div class="flex flex-col gap-5 mt-[30px]">
@@ -372,22 +375,22 @@
         </div>
     </div>
     <div class="bg-[#007bd8] h-[1800px] lg:h-[1050px] md:h-[1150px]">
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-3">
             <div class="text-center text-white font-semibold pt-[40px] md:text-[20px]">
                 <h3>Benefits</h3>
             </div>
-            <div class="text-white text-center font-bold text-[20px] w-[95%] lg:text-[30px] md:w-[70%] md:text-[25px] mx-auto lg:w-[40%]">
+            <div class="text-white text-center font-semibold text-[20px] w-[95%] lg:text-[30px] md:w-[70%] md:text-[25px] mx-auto lg:w-[40%]">
                 <p>Take the stress out of managing property and money</p>
             </div>
         </div>
         <div class="flex flex-col mt-[40px] gap-5">
             <div class="lg:flex lg:w-[95%] mx-auto md:flex md:w-[100%]">
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-1.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Global Coverage</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -395,12 +398,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[20px] lg:mt-0 rounded-[5px] md:w-[40%] md:mt-0">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[20px] lg:mt-0 rounded-[5px] md:w-[40%] md:mt-0">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-2.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Lowest Fee</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -410,12 +413,12 @@
                 </div>
             </div>
             <div class="lg:flex lg:w-[95%] mx-auto lg:mt-[20px] md:flex md:w-[100%] md:mt-[20px]">
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-3.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Simple Transfer</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -423,12 +426,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-4.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Instant Processing</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -438,12 +441,12 @@
                 </div>
             </div>
             <div class="lg:flex lg:w-[95%] mx-auto lg:mt-[20px] md:flex md:w-[100%] md:mt-[20px]">
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-5.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Commitment to security</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -451,12 +454,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
                     <div class="flex flex-col gap-3">
                         <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
                             <img src="image./benefits-6.png" alt="" class="w-[70px] h-[70px] p-[10px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold">
+                        <div class="text-[#2a3f65] font-semibold">
                             <h3>Global 24/7 Support</h3>
                         </div>
                         <div class="text-[#5D7079]">
@@ -469,16 +472,16 @@
     </div>
     <div class="lg:w-[95%] lg:flex lg:mt-[40px] mx-auto ">
         <!-- <div class="w-[100%] mx-auto"> -->
-            <div class="w-[95%] mx-auto mt-[50px] lg:w-[45%] md:w-[90%] md:mt-[100px]">
+            <div data-aos="fade-down" class="w-[95%] mx-auto mt-[50px] lg:w-[45%] md:w-[90%] md:mt-[100px]">
                 <img src="image/why-choose-us.jpg" alt="" class="w-[100%] lg:w-[100%] md:h-[900px] lg:h-[500px] h-[450px]">
             </div>
         <!-- </div> -->
-        <div class="flex flex-col items-center lg:w-[50%]">
+        <div data-aos="fade-down-right" class="flex flex-col items-center lg:w-[50%]">
             <div class="w-[100%] flex flex-col gap-3 mt-[40px]">
                 <div class="text-[green] w-[95%] font-semibold mx-auto md:w-[90%]">
                     <h3>Mobile Banking</h3>
                 </div>
-                <div class="text-[#2a3f65] font-bold w-[95%] mx-auto text-[20px] md:w-[90%] md:text-[25px]">
+                <div class="text-[#2a3f65] font-semibold w-[95%] mx-auto text-[17px] md:w-[90%] md:text-[25px]">
                     <span>Secure, convenient, and available 24/7/365</span>
                 </div>
                 <div class="text-[#5D7079] mx-auto w-[95%] md:w-[90%] ">
@@ -491,7 +494,7 @@
                         <div class="">
                             <img src="image/clock(1).png" alt="" class="w-[50px] h-[50px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold md:text-[20px]">
+                        <div class="text-[#2a3f65] font-semibold md:text-[20px]">
                             <h3>Faster And Cheaper</h3>
                         </div>
                     </div>
@@ -525,7 +528,7 @@
                         <div class="">
                             <img src="image/sheild.png" alt="" class="w-[50px] h-[50px]">
                         </div>
-                        <div class="text-[#2a3f65] font-bold md:text-[20px]">
+                        <div class="text-[#2a3f65] font-semibold md:text-[20px]">
                             <h3>Trusted & Secure</h3>
                         </div>
                     </div>
@@ -553,7 +556,7 @@
         <div class="text-[green] font-semibold w-[95%] mx-auto mt-[70px] lg:w-[90%] md:w-[90%]">
             <h3>Wealthtrust Bank Cards </h3>
         </div>
-        <div class="text-[#2a3f65] text-[20px] font-bold w-[95%] mx-auto lg:w-[90%] md:text-[25px] md:w-[90%] lg:text-[25px]">
+        <div class="text-[#2a3f65] text-[17px] font-semibold w-[95%] mx-auto lg:w-[90%] md:text-[25px] md:w-[90%] lg:text-[25px]">
             <h3>Compare our credit cards</h3>
         </div>
         <div class="text-[#5D7079] text-[15px] w-[95%] mx-auto lg:w-[90%] md:w-[90%]">
@@ -669,7 +672,7 @@
             <div class="text-[green] font-semibold w-[95%] mt-[30px] md:w-[90%] lg:mt-0 mx-auto">
                 <h3>Wealthtrust Bank Cards</h3>
             </div>
-            <div class="text-[#2a3f65] text-[20px] font-bold lg:text-[25px] w-[95%] md:w-[90%] mx-auto mt-[10px] md:text-[25px]">
+            <div class="text-[#2a3f65] text-[17px] font-semibold lg:text-[25px] w-[95%] md:w-[90%] mx-auto mt-[10px] md:text-[25px]">
                 <h3 class="w-[85%]">Let’s answer some of your questions or frequently asked questions</h3>
             </div>
             <div class="accordion max-w-2xl mx-auto p-4 md:max-w-2xl lg:max-w-4xl ">
@@ -783,7 +786,7 @@
                 <div class="text-[green] font-semibold w-[95%] md:w-[90%] lg:w-[] mx-auto">
                     <h3>Reliable Online Payment Platform</h3>
                 </div>
-                <div class="text-[#2a3f65] text-[20px] font-bold lg:text-[25px] w-[95%] lg:w-[] md:w-[90%] mx-auto md:text-[25px]">
+                <div class="text-[#2a3f65] text-[17px] font-semibold lg:text-[25px] w-[95%] lg:w-[] md:w-[90%] mx-auto md:text-[25px]">
                     <h3 class="w-[90%]">Financial power at your fingertips</h3>
                 </div>
                 <div class="text-[#5D7079] w-[95%] md:w-[90%] mx-auto">
@@ -842,7 +845,7 @@
         <div class="font-semibold text-center text-white pt-[40px]">
             <span>Smarter Banking</span>
         </div>
-        <div class="font-bold text-center text-white text-[20px] mt-[10px] md:text-[25px] lg:text-[30px]">
+        <div class="font-semibold text-center text-white text-[17px] mt-[10px] md:text-[25px] lg:text-[30px]">
             <h3 class="lg:w-[70%] md:w-[85%] mx-auto">Banking at the speed of business, Spend less time banking and more time growing your business.</h3>
         </div>
         <div class="flex justify-center mt-[40px] gap-3">
@@ -866,15 +869,15 @@
                         <p>Find an account that works for you, whether you're an individual, start-up, sole trader or SME.</p>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
-                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                <div class="flex flex-col lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-semibold text-[17px] w-[95%] mt-[30px] mx-auto">
                         <h2>Personal</h2>
                     </div>
-                    <div class="w-[95%] mx-auto">
+                    <div class="w-[95%] font-bold mx-auto">
                         <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
                     </div>
                     <div>
-                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                        <ul class="text-[#5D7079] flex flex-col gap-[2px] w-[95%] mt-2 mx-auto">
                             <li class="hover:text-[blue]"><a href="bankaccount.html">Bank Accounts</a></li>
                             <li class="hover:text-[blue]"><a href="">Credit cards</a></li>
                             <li class="hover:text-[blue]"><a href="mortgages.html">Mortgages</a></li>
@@ -883,30 +886,30 @@
                 </div>
             </div>
             <div class="md:flex items-center gap-20 md:w-[80%] mx-auto lg:w-[60%]">
-                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
-                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                <div class="flex flex-col lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-semibold text-[17px] w-[95%] mt-[30px] mx-auto">
                         <h2>Resources</h2>
                     </div>
-                    <div class="w-[95%] mx-auto">
+                    <div class="w-[95%] font-bold mx-auto">
                         <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
                     </div>
                     <div>
-                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                        <ul class="text-[#5D7079] flex flex-col gap-[2px] mt-2 w-[95%] mx-auto">
                             <li class="hover:text-[blue]"><a href="investment.html">Investment</a></li>
                             <li class="hover:text-[blue]"><a href="loan.html">Loan</a></li>
                             <li class="hover:text-[blue]"><a href="insurance.html">Insurance</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
-                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                <div class="flex flex-col lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-semibold text-[17px] w-[95%] mt-[30px] mx-auto">
                         <h2>About Us</h2>
                     </div>
-                    <div class="w-[95%] mx-auto">
+                    <div class="w-[95%] font-bold mx-auto">
                         <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
                     </div>
                     <div>
-                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                        <ul class="text-[#5D7079] flex flex-col gap-[2px] mt-2 w-[95%] mx-auto">
                             <li class="hover:text-[blue]"><a href="about.html">About</a></li>
                             <li class="hover:text-[blue]"><a href="contactus.html">Contact</a></li>
                             <li class="hover:text-[blue]"><a href="faqs.html">FAQ</a></li>
@@ -921,7 +924,7 @@
         <div class="mt-[25px] lg:mt-[80px] flex justify-center items-center">
             <p class="bg-gray-300 h-[1px] lg:w-[80%] w-[90%]"></p>
         </div>
-        <div class="flex justify-center items-center mt-[30px]">
+        <div class="flex justify-center items-center mt-[20px]">
             <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
             </svg>
@@ -941,7 +944,7 @@
             <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
             <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
         </div>
-        <div class="flex justify-center mt-[30px] gap-2">
+        <div class="flex justify-center mt-[20px] gap-2">
             <p class="text-[gray]"> > |</p>
             <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
         </div>
@@ -954,8 +957,9 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="../src/script.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     
     
     <script>
